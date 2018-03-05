@@ -48,11 +48,10 @@ The following image is the test image after undistorted.
 ![image2](./test_images/test_image_3_undisorted.jpg)
 
 
-## 3. Color/gradient threshold
+## 3. Combine threshold
 
 There are some features of lane line that can be used for lane line detection.
-Here, I combined the color infomation and gradient to distiguish it from background. 
-To reduce the light etc. effect, I used HLS color space and select the s channel.
+Here, the color information of the yellow lane line and white lane line is uese.
 
 ![image3](./test_images/combined_image.jpg)
 
@@ -85,4 +84,19 @@ In this step, a function that contained the methods in previous steps are define
 ![image6](./test_images/video_frame.jpg)
 
 The output video is 'test_videos_output/advanced_lane_line.mp4'
+
+## Discussions
+
+#### Problems/issues faced
+There are several problems that shall be considerd, for example, under the different weather condition and light condition which might cause the color information to changes a lot. While the thresholds used to find the yellow lane and white lane are the fixed values which are not flexible and might be invalid.
+
+Also the curvature of the lane line are calculated, but the accuracy of the curvature might alse be considered.
+
+#### Algorithm/pipeline could be approved
+
+As discussed in the 'Problem/issues faced' part, hwo to get high accuracy of the curvature and how to get the paramters automatically might be approved. 
+
+#### The hypothetical cases might failed
+
+This processing might be used in highway cases, but as in our daily normal traffic when you go to work in the morning, the case are more complexed. There are more cases, also people, slow vehicle speed, more traffic lights, etc.
 
