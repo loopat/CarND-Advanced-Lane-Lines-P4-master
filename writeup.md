@@ -59,9 +59,9 @@ Here, the color information of the yellow lane line and white lane line is uese.
 
 To get a bird view, I select the following source points and destination points to get the perspective transform matix.
 
-src points are [718,468],[1046,684],[248,684],[568,468]
+src points are [718,468],[1112,716],[212,716],[568,468]
 
-dst points are [920,0],  [920,720], [220,720],[220,0]
+dst points are [990,0],  [990,720], [320,720],[320,0]
 
 Then bird view image can be got.
 
